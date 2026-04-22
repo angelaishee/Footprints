@@ -593,6 +593,19 @@ footer{
   background:var(--navy);
   color:var(--cream);
 }
+/* ── NAV HOVER DROPDOWN ── */
+.nav-dropdown-wrap{position:relative;display:inline-block;}
+.nav-dropdown-wrap .nav-word{cursor:pointer;}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:var(--cream);min-width:200px;border:1px solid rgba(11,31,58,.08);box-shadow:0 8px 32px rgba(11,31,58,.12);padding:8px 0;z-index:500;}
+.nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+.nav-drop-link{display:block;padding:12px 24px;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:500;color:var(--navy);text-decoration:none;transition:background .25s, color .25s;white-space:nowrap;}
+.nav-drop-link:hover{background:var(--navy);color:var(--cream);}
+
+/* ── RESOURCES FLYOUT SUBMENU ── */
+.nav-drop-flyout-wrap{position:relative;}
+.nav-drop-flyout-trigger{display:flex;justify-content:space-between;align-items:center;cursor:pointer;white-space:nowrap;}
+.nav-drop-flyout{display:none;position:absolute;top:0;left:100%;background:var(--cream);min-width:220px;border:1px solid rgba(11,31,58,.08);box-shadow:0 8px 32px rgba(11,31,58,.12);padding:8px 0;z-index:501;}
+.nav-drop-flyout-wrap:hover .nav-drop-flyout{display:block;}
 </style>
 </head>
 <body>
@@ -611,7 +624,27 @@ footer{
 <!-- ── NAV — CREAM background ── -->
 <nav id="nav">
   <div class="nav-dropdown-wrap">
-    <span class="nav-word">Menu</span>
+<div class="nav-dropdown-wrap">
+  <span class="nav-word">Menu</span>
+  <div class="nav-dropdown">
+    <a href="#home" class="nav-drop-link">Home</a>
+    <a href="#about" class="nav-drop-link">Our Story</a>
+    <a href="#services" class="nav-drop-link">Experiences</a>
+    <a href="#destinations" class="nav-drop-link">Destinations</a>
+    <a href="#testimonials" class="nav-drop-link">Testimonials</a>
+    <a href="#lead" class="nav-drop-link">Plan My Trip</a>
+    <a href="#contact" class="nav-drop-link">Contact</a>
+    <div class="nav-drop-flyout-wrap">
+      <span class="nav-drop-link nav-drop-flyout-trigger">Resources ›</span>
+      <div class="nav-drop-flyout">
+        <a href="https://www.xe.com/currencyconverter/" class="nav-drop-link" target="_blank" rel="noopener noreferrer">Currency Converter</a>
+        <a href="https://travel.state.gov/" class="nav-drop-link" target="_blank" rel="noopener noreferrer">US Dept of State – Travel</a>
+        <a href="https://www.timeanddate.com/worldclock/" class="nav-drop-link" target="_blank" rel="noopener noreferrer">World Clock</a>
+        <a href="https://www.visahq.com/" class="nav-drop-link" target="_blank" rel="noopener noreferrer">International Visa Guide</a>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="nav-dropdown">
       <a href="#home" class="nav-drop-link">Home</a>
       <a href="#about" class="nav-drop-link">Our Story</a>
